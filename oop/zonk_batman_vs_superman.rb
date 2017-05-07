@@ -13,7 +13,35 @@
 # if a Superhero has a special_tool their attack is tripled
 # if a Superhero is attacked and their hitpoints are less than 1, they are no longer alive
 # Superhero needs a grab_tool method, that sets the has_special_tool attribute to true.
+'how do I determine whether something should have a setter or getter?
+how do i set each attribute to be collected as string, boolean, or integer?'
+class Superhero
+  attr_reader :name, :attack, :has_special_tool, :hitpoints
+  attr_writer :hitpoints, :alive
 
+  def initialize (input_options)
+    @name = input_options[:name]
+    @hitpoints = input_options[:hitpoints] #life
+    @attack = input_options[:attack] #power
+    @alive = input_options[:alive]
+    @has_special_tool = input_options[:has_special_tool]
+  end 
+
+  def hit(hero_being_hit)
+    hero_being_hit.hitpoints -= @attack
+  end 
+
+  def death
+    if hitpoints < 1
+      @alive == false
+    end 
+  end 
+
+  def grab_tool
+    @has_special_tool == true
+  end 
+
+end 
 
 # Driver code - don't touch anything below this line.
 puts "TESTING the Superhero class..."
