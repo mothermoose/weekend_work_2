@@ -18,7 +18,7 @@ attr_reader :rings
   end
 
   def bear_fruit
-    if @rings >= 7 & @rings <= 15 #wrong operator
+    if @rings >= 7 && @rings <= 15 #wrong operator
       bear_fruit = true
       return bear_fruit
     else 

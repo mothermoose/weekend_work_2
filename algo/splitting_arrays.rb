@@ -1,5 +1,21 @@
 # Complete the method called split_array, which two parameters, the first being an array, and the second being an integer. The method will then create an array of other arrays, each one being the size of the indicated by the second parameter. See the driver code for examples.
-'I have no idea how to do this one'
+counter = 0
+bigger_array = []
+smaller_array = []
+array.each do |element|
+  if counter % array_size == array_size - 1
+    bigger_array << element
+    bigger_array << smaller_array
+    smaller_array = []
+  else 
+    smaller_array << element
+  end 
+  counter +=1
+end 
+bigger_array
+end 
+
+
 
 def split_array(array, array_size)
   result = []
